@@ -1,15 +1,7 @@
 function solution(arr) {
-    let n = arr.length
-    var answer = Array.from(Array(n), ()=>Array(n).fill(0))
-    for (let i=0; i < n; i++){
-        for (let j=0; j<n; j++){
-            answer[i][j] = arr[j][i]
-        }
-    }
-    
-    for (let i=0; i < n; i++){
-        for (let j=0; j<n; j++){
-            if (arr[i][j] !== answer[i][j]){
+    for (let i=0; i < arr.length; i++){
+        for (let j=0; j < arr.length; j++){
+            if (arr[i][j] !== arr[j][i]){
                 return 0
             }
         }
