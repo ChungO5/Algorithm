@@ -1,9 +1,7 @@
 function solution(q, r, code) {
     var answer = '';
-    for (let i = 0; i < code.length; i++){
-        if (i % q === r){
-            answer += code[i]
-        }
+    for (let i = r; i < code.length; i+= q){
+        answer += code[i]
     }
     return answer;
 }
