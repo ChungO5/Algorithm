@@ -4,8 +4,7 @@ function solution(numbers, direction) {
         let n = numbers.pop()
         answer.push(n, ...numbers)
     } else{
-        let n = numbers[0]
-        numbers.shift()
+        let n = numbers.shift()
         answer.push(...numbers, n)
         
     }
