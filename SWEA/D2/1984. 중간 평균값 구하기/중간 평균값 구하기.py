@@ -1,5 +1,5 @@
 T = int(input())
-for i in range(T):
-    L = list(map(int, input().split()))
-    s = sum(L) - max(L) - min(L)
-    print('#%d %0.0f'%(i+1, round(s/8)))
+
+for i in range(1, T + 1):
+    l = list(map(int, input().split()))
+    print("#%d" % (i), round(sum(sorted(l)[1:9]) / 8))
